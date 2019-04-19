@@ -1,12 +1,14 @@
 package com.diseasetracker.diseasetracker;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
    /* TextView diseaseTrackerText;
     ImageView diseaseTrackerLogo;
@@ -19,5 +21,21 @@ public class MainActivity extends AppCompatActivity {
         /*diseaseTrackerText.findViewById(R.id.disease_tracker_text);
         diseaseTrackerLogo.findViewById(R.id.disease_tracker_logo);
         startGameButton.findViewById(R.id.start_game_button);*/
+        findViewById(R.id.start_game_button).setOnClickListener(this);
     }
+
+    @Override
+    public void onClick(View v) {
+        switch(v.getId()){
+            case R.id.start_game_button:
+                switchActivity();
+                break;
+        }
+    }
+    public void switchActivity() {
+        Intent intent = null;
+        intent = new Intent(this, LevelSelection.class);
+        startActivity(intent);
+    }
+
 }
