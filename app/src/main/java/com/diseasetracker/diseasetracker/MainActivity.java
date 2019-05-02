@@ -8,11 +8,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
    /* TextView diseaseTrackerText;
     ImageView diseaseTrackerLogo;
     Button startGameButton;*/
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

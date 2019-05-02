@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DiseaseTracker</string>
+    <string name="spinner_title">Select Disease</string>
+
 </resources>

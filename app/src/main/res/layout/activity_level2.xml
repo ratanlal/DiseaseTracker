@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,8 +15,71 @@
         android:textStyle="bold"
         android:textColor="@color/colorAccent"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="30dp"
         android:layout_gravity="center_horizontal"
         android:textSize="30dp"
         />
 
-</LinearLayout>
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="270dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/level2_task"
+        android:layout_alignParentLeft="true"
+
+        android:id="@+id/imageDisplay"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/score"
+        android:text="score: "
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/level2_task"
+        android:layout_marginBottom="20dp"
+        android:textSize="30dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:text="Select Disease:"
+        android:textSize="20dp"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@+id/score"
+        android:id="@+id/text_select_disease"/>
+    <!-- Spinner Element -->
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorAccent"
+        android:textSize = "20dp"
+        android:textAlignment="center"
+        android:layout_below="@+id/text_select_disease"
+        android:prompt="@string/spinner_title"
+        />
+
+    <Button
+        android:id="@+id/check_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorAccent"
+        android:padding="5dp"
+        android:textSize="20dp"
+        android:text="check"
+        android:textStyle="bold" />
+
+</RelativeLayout>
