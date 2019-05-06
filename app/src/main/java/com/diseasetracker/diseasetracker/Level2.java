@@ -71,6 +71,9 @@ public class Level2 extends AppCompatActivity implements AdapterView.OnItemSelec
         setContentView(R.layout.activity_level2);
         checkButton = findViewById(R.id.check_button);
         textScore = findViewById(R.id.score);
+        findViewById(R.id.download_wait).setVisibility(View.VISIBLE);
+        findViewById(R.id.check_button).setVisibility(View.GONE);
+
         imageDownload();
         textScore.setText("Score: "+String.valueOf(score));
 
@@ -170,7 +173,6 @@ public class Level2 extends AppCompatActivity implements AdapterView.OnItemSelec
                 randomNumberArray[i] = rand.nextInt(imageFile.length - 1);
                 // Log.i(TAG,"random num before send:"+ Integer.toString(randomNumberArray[i]));
             }
-            Log.i(TAG, "HOST  sending random num info");
 
 
         getUrl();
@@ -330,9 +332,10 @@ public class Level2 extends AppCompatActivity implements AdapterView.OnItemSelec
                     array[i] = addressArray1[i];
                 }
             }
-            //findViewById(R.id.download_wait).setVisibility(View.GONE);
+            findViewById(R.id.download_wait).setVisibility(View.GONE);
 
-            // findViewById(R.id.downloadView).setVisibility(View.VISIBLE);
+            findViewById(R.id.check_button).setVisibility(View.VISIBLE);
+
             if (countshowimage == 0) {
                 countshowimage++;
 

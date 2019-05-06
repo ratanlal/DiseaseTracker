@@ -82,4 +82,19 @@
         android:text="check"
         android:textStyle="bold" />
 
+<!-- download wait screen-->
+    <LinearLayout android:id="@+id/download_wait" style="@style/LLScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorSkyblue"
+        android:orientation="vertical"
+        tools:context=".HonkPlayMultiPlayer"
+        android:weightSum="4">
+
+        <TextView style="@style/Blurb" android:text="Please wait data is downloding..."
+
+            android:textSize="30dp"/>
+
+    </LinearLayout>
+
 </RelativeLayout>
